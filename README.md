@@ -1,1 +1,402 @@
-# thankyou
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anniversary 1 Bulan</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ADD8E6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    .content-box {
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    input[type="password"] {
+      font-size: 24px;
+      letter-spacing: 8px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .keypad button {
+      font-size: 18px;
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+      background-color: #87CEFA;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .keypad button:hover {
+      background-color: #4682B4;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 45%;
+      height: 150px;
+      margin: 10px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      background-color: #4682B4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .message-container p {
+      text-align: left;
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .final-message {
+      font-size: 48px;
+      color: #FF69B4;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px #ff4da6;
+    }
+
+    .heart {
+      font-size: 100px;
+      color: #FF69B4;
+      animation: pulse 1.5s infinite;
+      user-select: none;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Password Page -->
+  <div class="section" id="password-section">
+    <div class="content-box">
+      <h2>Enter Your Password</h2>
+      <input type="password" id="password" disabled />
+      <div class="keypad">
+        <button onclick="addDigit('1')">1</button>
+        <button onclick="addDigit('2')">2</button>
+        <button onclick="addDigit('3')">3</button><br />
+        <button onclick="addDigit('4')">4</button>
+        <button onclick="addDigit('5')">5</button>
+        <button onclick="addDigit('6')">6</button><br />
+        <button onclick="addDigit('7')">7</button>
+        <button onclick="addDigit('8')">8</button>
+        <button onclick="addDigit('9')">9</button><br />
+        <button onclick="clearPassword()">C</button>
+        <button onclick="addDigit('0')">0</button>
+        <button onclick="checkPassword()">✔️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Page -->
+  <div class="section hidden" id="gallery-section">
+    <div class="content-box">
+      <h2>Our Moments</h2>
+      <div class="gallery">
+        <img src="photo 1.jpeg" alt="Photo 1">
+        <img src="photo 2.jpeg" alt="Photo 2">
+        <img src="photo 3.jpeg" alt="Photo 3">
+        <img src="photo 4.jpeg" alt="Photo 4">
+        <img src="photo 5.jpeg" alt="Photo 5">
+      </div>
+      <div class="buttons">
+        <button onclick="showMessage()">Next</button>
+        <button onclick="goBack()">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Page 1 -->
+  <div class="section hidden" id="message-section">
+    <div class="content-box message-container">
+      <h2>Happy 1st Month, Sayang</h2>
+      <p>
+happy 1st month, sayang.
+
+gak kerasa, ya? udah sebulan bareng kamu, dan jujur, perjalanan ini gak selalu mulus. ada banyak momen di mana kita tersesat di jalan masing-masing, bahkan sempet hampir nyerah. i know, it was mostly because of me, my mistakes, and the way i handled things. i’m sorry for that
+
+kadang aku mikir, kalau aku bisa balik ke hari pertama kita, aku bakal bilang ke diri sendiri buat lebih banyak dengerin kamu, lebih banyak ngomong tanpa nunggu masalah numpuk, dan lebih banyak bilang sayang tanpa ragu. karena, honestly, loving you is the best thing that ever happened to me
+
+i admit, our communication wasn't perfect. kadang aku terlalu sibuk dengan pikiranku sendiri sampai lupa kalau kamu juga punya perasaan, punya harapan, dan punya batas. tapi dari semua ini, aku belajar kalau hubungan itu gak cuma soal ketawa bareng atau momen manis aja. it’s about standing by each other, even when things get rough
+
+thank you for choosing to stay, for not letting go, even when aku gak pantas buat diperjuangin. i promise, mulai sekarang, i’ll be a better version of myself for you, for us. gak akan ada lagi rasa ragu, gak akan ada lagi kata nyerah. bcs you’re worth every effort, every word, every second
+
+so, here’s to our first month. a chapter filled with ups and downs, but one I’ll never forget. i love you, and i promise to keep choosing you, every single day
+
+yours, always
+      </p>
+      <div class="buttons">
+        <button onclick="showNextMessage()">Next</button>
+        <button onclick="goBackToGallery()">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Page 2 -->
+  <div class="section hidden" id="message-next-section">
+    <div class="content-box message-container">
+      <img src="pin.jpeg" alt="Photo 6" style="width: 100%; border-radius: 10px; margin-bottom: 20px;"/>
+      <h2>Apa yang ingin aku perbaiki di hubungan ini</h2>
+      <p>
+        Kalau boleh jujur, hal paling besar yang ingin aku perbaiki dalam hubungan kita itu, aku sendiri.
+      </p>
+      <div style="text-align: left;">
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li><strong>mau lebih ngerti kamu:</strong> aku ingin bisa ngerti kamu lebih dalam, bukan cuma saat kamu senyum, tapi juga saat kamu diem.</li>
+          <li><strong>mau belajar dengerin kamu bener-bener:</strong> aku mau belajar untuk mendengarkan kamu sepenuh hati, bukan cuma nunggu giliran buat ngomong.</li>
+          <li><strong>berhenti gengsi buat jujur:</strong> aku sadar, kamu butuh kejelasan, kepastian, dan bukti. aku janji akan memberi itu, bukan hanya lewat kata-kata, tapi juga lewat sikap.</li>
+          <li><strong>kurangi keras kepala:</strong> aku tau, kadang aku terlalu keras kepala dan itu bikin kamu ngerasa sendiri. mulai sekarang, aku ingin jadi tempat yang bisa kamu pulang, bukan tempat yang bikin kamu capek.</li>
+          <li><strong>belajar bareng-bareng:</strong> aku ingin kita belajar bersama, bukan untuk menjadi sempurna, tapi untuk tumbuh lebih kuat. kita bisa salah, mencoba lagi, dan saling mendukung sepanjang perjalanan ini.</li>
+          <li><strong>perbaiki cara mencintai:</strong> aku ingin memperbaiki cara aku mencintai kamu. Bukan cuma sayang, tapi sayang yang penuh pengertian, kedewasaan, dan ketahanan.</li>
+        </ul>
+      </div>
+      <p>
+        aku bersyukur karena kamu sabar menunggu aku sampai ke titik ini. terima kasih sudah mempercayai kita, meskipun aku belum bisa menjadi versi terbaikku.
+      </p>
+      <div class="buttons">
+        <button onclick="showNextMessage()">Next</button>
+        <button onclick="goBackToMessage()">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Page 3 -->
+  <div class="section hidden" id="message-final-section">
+    <div class="content-box message-container">
+      <h2>Kenapa aku masih bertahan?</h2>
+      <p>
+       kenapa aku masih bertahan? simple. karena buat aku, kamu bukan sekadar cerita yang bisa selesai begitu aja. you're not just a phase, you're a choice. kamu adalah keputusan yang terus aku pilih setiap hari, tanpa ragu, tanpa banyak alasan
+
+kadang aku mikir, why am i still here? kenapa aku masih nunggu, masih berharap, masih mau bertahan di hubungan yang kadang bikin pusing? jawabannya gak rumit. karena aku gak mau kehilangan seseorang yang selalu bisa bikin hari-hari biasa jadi luar biasa, yang selalu kasih alasan buat senyum, bahkan di saat dunia lagi gak bersahabat
+
+aku bertahan bukan karena takut sendiri, tapi karena i believe in us. i believe in what we have, in the bond we've built. kamu bikin aku ngerti kalau cinta itu bukan soal selalu seneng, tapi juga soal bertahan pas keadaan lagi gak mudah
+
+you make me feel seen, heard, and understood. buat aku, itu lebih dari cukup. kamu bukan cuma tempat aku cerita, tapi juga tempat aku bisa jadi diri sendiri, tanpa filter, tanpa takut dihakimi
+
+mungkin kita gak selalu sejalan, kadang ada argumen, ada salah paham, ada jarak. tapi di antara semua itu, aku tahu satu hal yang pasti, i want this. i want us. aku mau terus ada di sini, mau terus coba, mau terus pilih kamu
+
+karena losing you is a risk i'm not willing to take. dan kalau suatu hari aku harus pilih lagi, aku tetap bakal pilih kamu. every single time
+      </p>
+      <div class="buttons">
+        <button onclick="showNextMessage()">Next</button>
+        <button onclick="goBackToPreviousMessage()">Kembali</button>
+      </div>
+    </div>
+  </div>  
+  
+  <!-- Message Page 4 -->
+  <div class="section hidden" id="message-harapan-section">
+    <div class="content-box message-container">
+      <h2>Harapan Aku Buat Kita</h2>
+      <p>
+       harapan aku buat kita sebenarnya sederhana. aku pengen kita bisa terus jalan bareng, bukan cuma di hari-hari yang gampang, tapi juga pas dunia lagi berat. i want us to grow together, to be each other's strength, to be the calm in the chaos
+
+aku harap kita bisa selalu jadi tempat pulang, tempat di mana semua cerita diterima tanpa dihakimi, tempat di mana rasa takut hilang, dan rasa nyaman selalu ada. i want us to be more than just a 'couple,' lebih dari sekadar status. aku mau kita jadi tim yang saling dukung, saling percaya, dan saling mengerti
+
+aku gak minta hubungan yang sempurna, karena aku tahu, perfection is just an illusion. tapi aku mau kita terus berusaha buat jadi versi terbaik dari diri kita, bukan buat orang lain, tapi buat kita sendiri. mau belajar untuk lebih sabar, lebih ngerti, dan lebih jujur
+
+aku harap kita gak pernah lupa alasan kenapa kita mulai, kenapa kita bertahan, dan kenapa kita saling pilih. karena aku yakin, selama kita tetap saling percaya dan tetap mau usaha, gak ada hal yang gak bisa kita lewatin
+
+dan yang paling penting, aku harap kita bisa selalu saling memilih, even when things get tough. karena di akhir hari, yang paling penting bukan seberapa banyak kita ketawa bareng, tapi seberapa kuat kita bisa tetap bertahan bareng
+      </p>
+      <div class="buttons">
+         <button onclick="showNextMessage()">Next</button>
+        <button onclick="goBackToNextMessage()">Kembali</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Message Page 5 -->
+  <div class="section hidden" id="message-hal-kecil-section">
+    <div class="content-box message-container">
+      <h2>Hal-Hal Kecil yang Bikin Aku Sayang Kamu</h2>
+      <p>
+       mungkin kelihatannya sepele, tapi ada banyak hal kecil yang bikin aku sayang kamu, yang bikin aku gak bisa ninggalin kamu, yang bikin aku terus mau ada di sini
+
+kayak cara kamu ngingetin buat makan, walaupun kamu sendiri kadang lupa makan. atau caramu dengerin aku cerita, bahkan pas ceritanya gak jelas atau cuma keluhan random yang gak penting
+
+terus, aku suka gimana kamu bisa bikin aku ketawa di saat mood lagi jelek. bahkan cuma dengan satu kalimat receh atau chat random yang gak masuk akal. you have that magic, the kind that makes even the worst days feel a bit lighter
+
+aku juga suka caramu marah, bukan karena aku suka bikin kamu kesel, tapi karena di balik semua itu, aku tahu kamu peduli. kamu gak akan marah kalau gak sayang, dan itu bikin aku ngerasa dihargai
+
+dan jangan lupa, aku suka cara kamu peduli tanpa harus selalu ngomong. the way you notice the small things, the way you remember the little details, itu yang bikin aku ngerasa spesial, ngerasa diperhatiin
+
+aku sayang kamu bukan cuma karena hal besar, tapi juga karena hal-hal kecil yang bikin kamu beda, yang bikin kamu spesial, yang bikin aku ngerasa beruntung punya kamu
+      </p>
+      <div class="buttons">
+         <button onclick="showFinal()">Selesai</button>
+        <button onclick="goBackToHope()">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Page -->
+  <div class="section hidden" id="final-section">
+    <div class="content-box">
+      <div class="final-message">I LOVE U SO MUCH SAYANG</div>
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+  <script>
+  const correctPassword = "0409"; // Ganti sesuai password yang kamu inginkan
+  let enteredPassword = "";
+
+  function addDigit(digit) {
+    if (enteredPassword.length < 4) {
+      enteredPassword += digit;
+      document.getElementById("password").value = "*".repeat(enteredPassword.length);
+    }
+  }
+
+  function clearPassword() {
+    enteredPassword = "";
+    document.getElementById("password").value = "";
+  }
+
+  function checkPassword() {
+    if (enteredPassword === correctPassword) {
+      document.getElementById("password-section").classList.add("hidden");
+      document.getElementById("gallery-section").classList.remove("hidden");
+    } else {
+      alert("Password salah, coba lagi ya!");
+      clearPassword();
+    }
+  }
+
+  function showMessage() {
+    document.getElementById("gallery-section").classList.add("hidden");
+    document.getElementById("message-section").classList.remove("hidden");
+  }
+
+  function showNextMessage() {
+    if (!document.getElementById("message-section").classList.contains("hidden")) {
+      document.getElementById("message-section").classList.add("hidden");
+      document.getElementById("message-next-section").classList.remove("hidden");
+    } else if (!document.getElementById("message-next-section").classList.contains("hidden")) {
+      document.getElementById("message-next-section").classList.add("hidden");
+      document.getElementById("message-final-section").classList.remove("hidden");
+    } else if (!document.getElementById("message-final-section").classList.contains("hidden")) {
+      document.getElementById("message-final-section").classList.add("hidden");
+      document.getElementById("message-harapan-section").classList.remove("hidden");
+    } else if (!document.getElementById("message-harapan-section").classList.contains("hidden")) {
+      document.getElementById("message-harapan-section").classList.add("hidden");
+      document.getElementById("message-hal-kecil-section").classList.remove("hidden");
+    }
+  }
+
+  function showFinal() {
+    document.getElementById("message-hal-kecil-section").classList.add("hidden");
+    document.getElementById("final-section").classList.remove("hidden");
+  }
+
+  function goBack() {
+    document.getElementById("gallery-section").classList.add("hidden");
+    document.getElementById("password-section").classList.remove("hidden");
+    clearPassword();
+  }
+
+  function goBackToGallery() {
+    document.getElementById("message-section").classList.add("hidden");
+    document.getElementById("gallery-section").classList.remove("hidden");
+  }
+
+  function goBackToMessage() {
+    document.getElementById("message-next-section").classList.add("hidden");
+    document.getElementById("message-section").classList.remove("hidden");
+  }
+
+  function goBackToPreviousMessage() {
+    document.getElementById("message-final-section").classList.add("hidden");
+    document.getElementById("message-next-section").classList.remove("hidden");
+  }
+
+  function goBackToNextMessage() {
+    document.getElementById("message-harapan-section").classList.add("hidden");
+    document.getElementById("message-final-section").classList.remove("hidden");
+  }
+
+  function goBackToHope() {
+    document.getElementById("message-hal-kecil-section").classList.add("hidden");
+    document.getElementById("message-harapan-section").classList.remove("hidden");
+  }
+  </script>
+
+</body>
+</html>
+
